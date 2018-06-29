@@ -1,5 +1,5 @@
 server:
-  port: 8023
+  port: 8031
 
 spring:
   cloud:
@@ -7,4 +7,16 @@ spring:
       server:
         default-application-name: config-server
         git:
-          uri:
+          uri: https://github.com/KatyConnor/hx-cloud-config  # 配置git仓库地址
+          search-paths: trunk # 仓库路径
+          username: 2825523288@qq.com
+          password: qazxsw159357
+      label: master #仓库的分支
+  profiles:
+    active: local
+
+# 如果是logback-spring.xml 则不需要配置
+#logging:
+#  config: classpath:logback-spring.xml
+
+

@@ -14,6 +14,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 public class HXConfigServiceApplication {
 
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         SpringApplication.run(HXConfigServiceApplication.class,args);
+        System.out.println("启动成功，耗时："+(System.currentTimeMillis() - start)+"ms");
     }
 }
